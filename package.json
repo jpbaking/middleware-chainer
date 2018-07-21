@@ -1,42 +1,41 @@
 {
-  "name": "middleware-extras",
+  "name": "middleware-chainer",
   "version": "1.0.0",
-  "description": "middleware-extras",
+  "description": "middleware-chainer",
   "main": "main/Main.js",
   "scripts": {
     "test": "./node_modules/.bin/nyc ./node_modules/.bin/mocha ./**/*Test.spec.js --forbid-only --forbid-pending --reporter=\"mochawesome\" --reporter-options=\"reportDir=./test-results/mocha/,reportFilename=index.html\""
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jpbaking/node-middleware-extras.git"
+    "url": "git+https://github.com/jpbaking/middleware-chainer.git"
   },
   "keywords": [
     "express",
     "expressjs",
     "express-middleware",
     "expressjs-middleware",
-    "middleware-extras",
+    "middleware-chainer",
     "middleware",
     "middlewares",
     "chain",
     "chaining",
-    "finally",
     "middleware-chain",
     "middleware-chaining",
-    "middleware-finally",
     "jpbaking"
   ],
   "author": "Joseph Baking <josephbaking.ph@gmail.com> (https://github.com/jpbaking)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jpbaking/node-middleware-extras/issues"
+    "url": "https://github.com/jpbaking/middleware-chainer/issues"
   },
-  "homepage": "https://github.com/jpbaking/node-middleware-extras#readme",
+  "homepage": "https://github.com/jpbaking/middleware-chainer#readme",
   "devDependencies": {
     "jshint": "^2.9.5",
     "mocha": "^5.2.0",
     "mochawesome": "^3.0.2",
-    "nyc": "^12.0.2"
+    "nyc": "^12.0.2",
+    "sinon": "^6.1.3"
   },
   "nyc": {
     "check-coverage": true,
