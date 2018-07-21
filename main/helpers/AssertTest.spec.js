@@ -480,4 +480,11 @@ describe(require('path').basename(__filename), function () {
     assert.doesNotThrow(() => Assert.noNullElements([1, 2, 3]));
   });
 
+  it('should `validate`', function () {
+    assert.throws(() => Assert.validate(false, 'wow'));
+    assert.doesNotThrow(() => Assert.validate(false, 'wow', false));
+    assert.ok(!Assert.validate(false, 'wow', false));
+    assert.ok(Assert.validate(true, 'wow', true));
+  });
+
 });

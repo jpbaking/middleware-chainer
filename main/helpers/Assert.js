@@ -8,18 +8,12 @@ function IllegalArgumentError(message) {
   }
   Error.captureStackTrace(this, this.constructor);
   hro(this, 'message', message);
-  const stackArr = this.stack.split('\n');
-  hro(this, 'stack', `${stackArr[0]}\n${stackArr[5]}`);
 }
 IllegalArgumentError.prototype = Object.create(Error.prototype);
 IllegalArgumentError.prototype.constructor = IllegalArgumentError;
 hro(IllegalArgumentError.prototype.constructor, 'name', 'IllegalArgumentError');
 hro(IllegalArgumentError.prototype.constructor, 'toString', () => '[IllegalArgumentError]');
 hro(IllegalArgumentError.prototype, 'name', 'IllegalArgumentError');
-
-function error(message) {
-  return IllegalArgumentError(message);
-}
 
 function noNullElementsValidator(o) {
   if (!(!!o) || !Array.isArray(o)) {
@@ -52,7 +46,7 @@ const validator = {
 function validate(isOk, m, throwError = true) {
   if (!isOk) {
     if (throwError) {
-      throw error(m);
+      throw IllegalArgumentError(m);
     }
     else {
       return false;
