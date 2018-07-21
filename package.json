@@ -2,7 +2,7 @@
   "name": "middleware-chainer",
   "version": "1.0.0",
   "description": "middleware-chainer",
-  "main": "main/Main.js",
+  "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/nyc ./node_modules/.bin/mocha ./**/*Test.spec.js --forbid-only --forbid-pending --reporter=\"mochawesome\" --reporter-options=\"reportDir=./test-results/mocha/,reportFilename=index.html\""
   },
