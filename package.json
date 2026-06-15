@@ -25,7 +25,7 @@
     "jpbaking"
   ],
   "author": "Joseph Baking <josephbaking.ph@gmail.com> (https://github.com/jpbaking)",
-  "license": "MIT",
+  "license": "0BSD",
   "bugs": {
     "url": "https://github.com/jpbaking/middleware-chainer/issues"
   },
